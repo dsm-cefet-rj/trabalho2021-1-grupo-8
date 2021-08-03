@@ -1,53 +1,135 @@
-<htm>
+<html>
   <head>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" />
     <style>
       .header {
-        
         width: auto;
         height: 8rem;
         display: flex;
         margin-bottom: 2rem;
         border: 1px solid black;
+        border-radius: 10px;
       }
       .header img {
+        margin: 0.5rem;
         width: 7rem;
+        height: 7rem;
+        border-radius: 10px;
       }
       .header .chat {
         margin-left: auto;
       }
-      .container{
+      .container {
         display: flex;
         justify-content: center;
       }
-      .container .arrow{
+      .container .arrow {
         height: 5rem;
-        
+
         margin-top: 25%;
       }
-      .container .ed{
-        width: 40rem;
+      .container .ed {
+        width: 35rem;
+        height: 35rem;
+        border-radius: 10px;
+        margin-top: 1rem;
       }
-      .card{
-
+      .card {
         border: 1px solid black;
+        border-radius: 10px;
+        width: 40rem;
+        height: 45rem;
+        text-align: center;
       }
+      .menu {
+        width: 100%;
+        height: 50px;
+      }
+      .menu ul{
+        list-style: none;
+
+      }
+      .menu ul{
+        margin-top: -0.1rem;
+        margin-left: -2rem;
+      }
+      .menu a{
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        text-align: center;
+      }
+      .menu ul ul{
+        position: absolute;
+        visibility: hidden;
+        margin-top: 5rem;
+        margin-top: -1rem;
+      }
+      .menu ul li:hover + ul{
+        visibility: visible;
+      }
+     .menu ul ul li{
+       
+       border-bottom: solid 1px black;
+     }
+     @media(max-width:600px){
+      .header {
+        width: auto;
+        height: 6rem;
+        display: flex;
+        margin-bottom: 2rem;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .header img {
+        margin: 0.5rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 10px;
+      }
+      .header .chat {
+        margin-left: auto;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .container .arrow {
+        height: 2rem;
+
+        margin-top: 60%;
+      }
+      .container .ed {
+        width: 17rem;
+        height: 20rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+      }
+      .card {
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 22rem;
+        height: 35rem;
+        text-align: center;
+      }
+      
+     }
     </style>
   </head>
   <body>
     <div class="header">
-      <img src="mar.jpg" />
+      <img src="mar.jpg">
       <img src="conversation.png" class="chat" />
     </div>
     <div class="container">
-      <img src="left-arrow.png" class="arrow"/>
+      <img src="left-arrow.png" class="arrow" />
       <div class="card">
-        <img src="ED.jpg" class="ed"/>
+        <img src="ED.jpg" class="ed" />
         <h1>Ednaldo Pereira, 18</h1>
         <p>R$ 800,00</p>
         <button>Info</button>
       </div>
-      <img src="next.png" class="arrow">
+      <img src="next.png" class="arrow" />
     </div>
   </body>
-</htm>
+</html>
