@@ -1,33 +1,107 @@
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <style>
-      .chat{
-        border: 1px solid black;
+      .chat {
         width: fit-content;
       }
       .nome {
         display: flex;
+        
       }
-
+      .nome p{
+        font-size: 24px;
+        margin-left: 15rem;
+      }
       .nome img {
-        width: 3rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 1.5rem;
+        margin-left: 0.5rem;
       }
-      .send{
+      .send {
         margin-top: 25rem;
+        margin-left: 15rem;
+        margin-bottom: 1rem;
+      }
+      .tudo{
+        display: flex;
+        border: 2px solid grey;
+        width: 900px;
+      }
+      .pessoa{
+        display: block;
+        width: 20%;
+        border-right: 1px solid grey ;
+        text-align: center;
+      }
+      .pessoa img{
+        width: 8rem;
+        margin: 1rem 0;
+        border: 2px solid black;
+        border-radius: 100px;
+      }
+      @media(max-width:600px){
+        .chat {
+        width: fit-content;
+      }
+      .nome {
+        display: flex;
+        
+      }
+      .nome p{
+        font-size: 24px;
+        margin-left: 5rem;
+      }
+      .nome img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 1.5rem;
+        margin-left: 0.5rem;
+      }
+      .send {
+        
+        margin-left: 5rem;
+        margin-bottom: 1rem;
+      }
+      .tudo{
+        display: block;
+        border: 2px solid grey;
+        width: 100%;
+        height: 100%;
+      }
+      .pessoa{
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid grey ;
+        text-align: center;
+      }
+      .pessoa img{
+        width: 5rem;
+        margin: 1rem;
+        border: 2px solid black;
+        border-radius: 100px;
+      }
       }
     </style>
   </head>
   <body>
-    <div class="chat">
-      <div class="nome">
-        <img src="left-arrow.png" />
-        <p>Ednaldo Pereira</p>
+    <div class="tudo">
+      <div class="pessoa">
+        <img src="mar.jpg" />
+        <img src="mar.jpg" />
+        <img src="mar.jpg" />
       </div>
-      <div class="send">
-        <input />
-        <button>Enviar</button>
+      <div class="chat">
+        <div class="nome">
+          <img src="left-arrow.png" />
+          <p>Ednaldo Pereira</p>
+        </div>
+        <div class="send">
+          <input />
+          <button>Enviar</button>
+        </div>
       </div>
     </div>
   </body>
