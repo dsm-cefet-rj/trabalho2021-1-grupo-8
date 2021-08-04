@@ -13,11 +13,35 @@
   }
   .container{
       justify-content: left;
-      padding: auto;
       margin: 1%;
   }
   .container .fp{
       display: flex;
       width: auto;
       height: 10rem;
+  }
+  @media(max-width:600px){
+    .imgs{
+        display: flex;
+        width: auto;
+        height: 7rem;
+        padding: 1rem;
+        margin: 1rem;
+        background-color: snow;
+        justify-content: center;
+    }
+    .i{
+        border: 1px solid black;
+        margin: 1rem;
+    }
+    .container{
+        justify-content: left;
+        margin: 1%;
+        font-size: smaller;
+    }
+    .container .fp{
+        display: flex;
+        width: auto;
+        height: 6rem;
+    } 
   }
