@@ -19,3 +19,24 @@ p {
     align-items: center;
     margin-left: 20%;
 }
+@media(max-width:600px){
+    img {
+        width: 50%;
+    }
+    
+    h2 {
+        margin-top: 5%;
+        margin-left: 2%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    p {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .container {
+        display: block;
+        align-items: center;
+        margin-left: 20%;
+    }
+}
