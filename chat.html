@@ -8,9 +8,8 @@
       }
       .nome {
         display: flex;
-        
       }
-      .nome p{
+      .nome p {
         font-size: 24px;
         margin-left: 15rem;
       }
@@ -25,68 +24,184 @@
         margin-left: 15rem;
         margin-bottom: 1rem;
       }
-      .tudo{
+      .tudo {
         display: flex;
         border: 2px solid grey;
         width: 900px;
+        margin-left: 25%;
       }
-      .pessoa{
+      .pessoa {
         display: block;
         width: 20%;
-        border-right: 1px solid grey ;
+        border-right: 1px solid grey;
         text-align: center;
       }
-      .pessoa img{
+      .pessoa img {
         width: 8rem;
         margin: 1rem 0;
         border: 2px solid black;
         border-radius: 100px;
       }
-      @media(max-width:600px){
-        .chat {
-        width: fit-content;
-      }
-      .nome {
+      .header {
+        width: auto;
+        height: 8rem;
         display: flex;
-        
+        margin-bottom: 2rem;
+        border: 1px solid black;
+        border-radius: 10px;
       }
-      .nome p{
-        font-size: 24px;
-        margin-left: 5rem;
+      .header img {
+        margin: 0.5rem;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 10px;
       }
-      .nome img {
-        width: 1.5rem;
-        height: 1.5rem;
-        margin-top: 1.5rem;
-        margin-left: 0.5rem;
+      .header .chat {
+        margin-left: auto;
       }
-      .send {
-        
-        margin-left: 5rem;
-        margin-bottom: 1rem;
-      }
-      .tudo{
-        display: block;
-        border: 2px solid grey;
+      .menu {
         width: 100%;
-        height: 100%;
+        height: 50px;
       }
-      .pessoa{
+      .menu ul {
+        list-style: none;
+      }
+      .menu ul {
+        margin-top: -0.1rem;
+        margin-left: -2rem;
         display: flex;
-        width: 100%;
-        border-bottom: 1px solid grey ;
-        text-align: center;
       }
-      .pessoa img{
+
+      .menu ul ul {
+        position: absolute;
+        display: none;
+        background-color: black;
+        color: white;
         width: 5rem;
-        margin: 1rem;
-        border: 2px solid black;
-        border-radius: 100px;
+        height: 7rem;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        border-radius: 10px;
       }
+      .menu ul li:hover + ul {
+        display: block;
+      }
+
+      .menu ul ul li {
+        text-align: left;
+        margin-top: 1rem;
+        margin-left: -1.5rem;
+      }
+      @media (max-width: 600px) {
+        .chat {
+          width: fit-content;
+        }
+        .nome {
+          display: flex;
+        }
+        .nome p {
+          font-size: 24px;
+          margin-left: 5rem;
+        }
+        .nome img {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-top: 1.5rem;
+          margin-left: 0.5rem;
+        }
+        .send {
+          margin-left: 5rem;
+          margin-bottom: 1rem;
+        }
+        .tudo {
+          display: block;
+          border: 2px solid grey;
+          width: 100%;
+          height: 100%;
+          margin-left: -0.2rem;
+        }
+        .pessoa {
+          display: flex;
+          width: 100%;
+          border-bottom: 1px solid grey;
+          text-align: center;
+        }
+        .pessoa img {
+          width: 5rem;
+          margin: 1rem;
+          border: 2px solid black;
+          border-radius: 100px;
+        }
+        .header {
+        width: auto;
+        height: 6rem;
+        display: flex;
+        margin-bottom: 2rem;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .header img {
+        margin: 0.5rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 10px;
+      }
+      .header .chat {
+        margin-left: auto;
+      }
+      
+      .menu {
+        width: 100%;
+        height: 50px;
+      }
+      .menu ul {
+        list-style: none;
+      }
+      .menu ul {
+        margin-top: -0.1rem;
+        margin-left: -2rem;
+        display: flex;
+      }
+
+      .menu ul ul {
+        position: absolute;
+        display: none;
+        background-color: black;
+        color: white;
+        width: 5rem;
+        height: 7rem;
+        margin-left: 6rem;
+        margin-top: 0.5rem;
+        border-radius: 10px;
+      }
+      .menu ul li:hover + ul {
+        display: block;
+      }
+
+      .menu ul ul li {
+        text-align: left;
+        margin-top: 1rem;
+        margin-left: -1.5rem;
+      }
+        
       }
     </style>
   </head>
   <body>
+    <div class="header">
+      <div class="menu">
+        <ul>
+          <li><img src="mar.jpg" /></li>
+          <ul>
+            <li class="item">Perfil</li>
+            <li class="item">Imóveis</li>
+            <li class="item">Configurações</li>
+          </ul>
+        </ul>
+      </div>
+
+      <img src="conversation.png" class="chat" />
+    </div>
     <div class="tudo">
       <div class="pessoa">
         <img src="mar.jpg" />
