@@ -3,7 +3,7 @@ import styles from "./styles/perfil.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { Link } from "react-router-dom";
 const profiles = [
   {
     id: 1,
@@ -97,6 +97,7 @@ export default function Perfil() {
             </div>
           ))}
         </Slider>
+        
       </div>
     </div>
   );
