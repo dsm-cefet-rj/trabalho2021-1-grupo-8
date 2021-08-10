@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import Chat from "../Chat/chat";
 
 export default function Header() {
   const [isClicked, setIsClicked] = useState(false);
@@ -14,13 +16,28 @@ export default function Header() {
       {isClicked ? (
         <div className={styles.options}>
           <ul>
-            <li><a href="/"><p>Perfil</p></a></li>
-            <li><a href="/"><p>Imóveis</p></a></li>
-            <li><a href="/"><p>Configurações</p></a></li>
+            <li>
+              <Link to="/perfil">
+                <p>Perfil</p>
+              </Link>
+            </li>
+            <li>
+              <a href="/">
+                <p>Imóveis</p>
+              </a>
+            </li>
+            <li>
+              <a href="/">
+                <p>Configurações</p>
+              </a>
+            </li>
           </ul>
         </div>
       ) : null}
-      <a href="/"><img className={styles.chat} src="/conversation.png" alt="chat" /></a>
+
+      <Link to="/chat">
+        <img className={styles.chat} src="/conversation.png" alt="chat" />
+      </Link>
     </div>
   );
 }
