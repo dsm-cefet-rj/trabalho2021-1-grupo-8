@@ -28,18 +28,24 @@ p {
     }
     
     h2 {
-        margin-top: 5%;
-        margin-left: 2%;
+        margin-top: 9%;
+        float: right;
+        margin-right: 10%;
+        font-size: 18px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     
     p {
         font-family: 'Courier New', Courier, monospace;
+        font-size: 13px;
+        float: right;
+        margin-right: 6%;
+        margin-top: -18%;
     }
     
     .lista {
         display: block;
         align-items: center;
-        margin-left: 20%;
+        margin-left: 2%;
     }
 }
