@@ -1,0 +1,29 @@
+img{
+    border: 1px solid black;
+    margin: 1rem;
+}
+.container{
+    justify-content: left;
+    margin: 1%;
+}
+.container .fp{
+    display: flex;
+    width: auto;
+    height: 10rem;
+}
+@media(max-width:600px){
+    img{
+        border: 1px solid black;
+        margin: 1rem;
+    }
+    .container{
+        justify-content: left;
+        margin: 1%;
+        font-size: smaller;
+    }
+    .container .fp{
+        display: flex;
+        width: auto;
+        height: 6rem;
+    }
+}
