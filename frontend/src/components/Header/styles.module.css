@@ -5,13 +5,17 @@
   background-color: #F5D38F;
   user-select: none;
 }
+.container{
+  z-index: 99;
+background-color: green;
+}
 .all a{
   margin-left: auto;
 }
 .all .chat{
   margin-left: auto;
   padding-right: 0.5rem;
-  padding-top: 0.5rem;
+  padding-top: 1.5rem;
   border-radius: 0;
 }
 .all img{
@@ -42,17 +46,68 @@
   width: 8rem;
   cursor: pointer;
 }
+@media (min-width:600px) and (max-width:1200px){
+  .all{
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    background-color: #F5D38F;
+    user-select: none;
+  }
+  .container{
+    z-index: 99;
+  background-color: green;
+  }
+  .all a{
+    margin-left: auto;
+  }
+  .all .chat{
+    right: 20%;
+    padding-right: 0.5rem;
+    
+    padding-top: 0.5rem;
+    border-radius: 0;
+  }
+  .all img{
+    width: 100px;
+    height: 100px;
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+    border-radius: 200px;
+  }
+  .button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+  .options{
+    margin-left: -1rem;
+    margin-top: -0.5rem;
+  }
+  .options ul{
+    list-style: none;
+    text-align: center;
+  }
+  .options ul li{
+    background-color: white;
+    
+    height: 1.5rem;
+    border-radius: 7px;
+    width: 8rem;
+    cursor: pointer;
+  }
+}
 @media (max-width:600px){
   .all .chat{
-    margin-left: auto;
+    margin-left: -5rem;
     padding-right: 0.5rem;
     padding-top: 0.7rem;
     border-radius: 0;
     
   }
   .all img{
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     padding-top: 0.2rem;
     padding-left: 0.5rem;
     border-radius: 200px;
@@ -61,7 +116,7 @@
     position: absolute;
     margin-top: 7rem;
     z-index: 99;
-    margin-left: -1.5rem;
+    margin-left: -2rem;
     
   }
   .options ul{

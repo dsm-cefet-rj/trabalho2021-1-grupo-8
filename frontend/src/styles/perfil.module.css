@@ -62,6 +62,72 @@
   width: 40px;
   height: 40px;
 }
+@media (min-width:600px) and (max-width:1200px){
+  .all{
+    width: 100vw;
+  }
+  .slider{
+    margin-left: 5rem;
+    width: 80vw;
+  }
+  .images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .images img{
+    width: 30vw;
+    height: 40vh;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.3rem;
+  }
+  .card{
+    background-color: var(--amarelo);
+    border-radius: 10px;
+    height: 65vh;
+    width: 30vh;
+    margin-top: 5rem;
+    text-align: center;
+  }
+  
+  .moreInfo{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 2.3rem;
+    margin-left: 7.8rem;
+    width: 62vw;
+    height: 40vh;
+  }
+  .moreInfo p{
+    padding-top: 2rem;
+  }
+  .buttons{
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .buttons button{
+    background-color: inherit;
+    border: none;
+  }
+  .buttons img{
+    border-radius: 0;
+    width: 45px;
+    height: 45px;
+  }
+  .btChat{
+    margin-left: auto;
+  }
+  .btChat img{
+    
+    width: 40px;
+    height: 40px;
+  }
+}
 @media (max-width:600px){
 
   .slider{
