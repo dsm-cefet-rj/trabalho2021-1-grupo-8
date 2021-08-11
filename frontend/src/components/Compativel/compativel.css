@@ -1,5 +1,5 @@
 img{
-    border: 1px solid black;
+    width: 50%;
     margin: 1rem;
 }
 .container{
@@ -13,8 +13,8 @@ img{
 }
 @media(max-width:600px){
     img{
-        border: 1px solid black;
-        margin: 1rem;
+        
+        width: 50%;
     }
     .container{
         justify-content: left;

@@ -8,8 +8,8 @@
     justify-content: center;
 }
 img{
-    border: 1px solid black;
-    margin: 1rem;
+   width: 50%;
+  
 }
 .info{
     justify-content: left;
@@ -21,13 +21,12 @@ img{
         width: auto;
         height: 7rem;
         padding: 1rem;
-        margin: 1rem;
+       
         background-color: snow;
         justify-content: center;
     }
     img{
-        border: 1px solid black;
-        margin: 1rem;
+        width: 50%;
     }
     .info{
         justify-content: left;
