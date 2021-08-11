@@ -67,7 +67,7 @@
     border-radius: 10px;
   }
 }
-@media (min-width:770px) and (max-width:1200px) {
+@media (min-width:1200px) and (max-width:1400px){
   .all {
     display: flex;
     border: 10px solid var(--amarelo);
@@ -110,6 +110,76 @@
     margin-top: auto;
     margin-bottom: 1rem;
     margin-left: 5rem;
+    width: 90%;
+    height: 8%;
+    border: 3px solid var(--amarelo);
+    border-radius: 10px;
+  }
+  .chat .send input{
+    width: 80%;
+    height: 100%;
+    border: none;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+    font-size: 24px;
+    
+  }
+  .chat .send input:focus{
+    outline: none ;
+  }
+  .chat .send button{
+    background-color: var(--amarelo);
+    border: none;
+    height: 80%;
+    width: 15%;
+    font-size: 20px;
+    font-family: 'Patua One',sans-serif;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width:770px) and (max-width:1200px) {
+  .all {
+    display: flex;
+    border: 10px solid var(--amarelo);
+    border-radius: 20px;
+    width: 90vw;
+    height: 70vh;
+    margin: 4rem 0 0 1rem;
+  }
+  .people {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15%;
+    margin: 1rem;
+    border-right: 1px solid var(--amarelo);
+  }
+  .people img {
+    margin: 0.5rem;
+    width: 70%;
+    height: 25%;
+    border-radius: 500px;
+    border: 5px solid var(--amarelo);
+  }
+  .chat {
+    display: flex;
+    flex-direction: column;
+    
+    width: 85%;
+  }
+  .chat p {
+    font-size: 36px;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+    margin-left: 5rem;
+    width: 80%;
+    text-align: center;
+    border-bottom: 1px solid var(--amarelo);
+  }
+  .chat .send{
+    margin-top: auto;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
     width: 80%;
     height: 8%;
     border: 3px solid var(--amarelo);
