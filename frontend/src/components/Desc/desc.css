@@ -1,34 +1,81 @@
-.imgs{
+/*imagens*/
+.albumCasa{
     display: flex;
-    width: auto;
-    height: 17rem;
+    width: 20rem;
+    height: 15rem;
     padding: 1rem;
-    margin: 1rem;
-    background-color: snow;
+    margin-left: 25rem;
     justify-content: center;
 }
-img{
-   width: 50%;
-  
+.imgdesc{
+   width: 20rem;
+   margin: 1rem;
+   padding: auto;
+   transition: transform .2s;
 }
+.imgdesc:hover {
+    transform: scale(1.2);
+}
+
+/*descrição*/
 .info{
-    justify-content: left;
-    margin: 1%;
+    justify-content: center;
+    text-align: left;
 }
-@media(max-width:600px){
-    .imgs{
+.infoComodos{
+   color: #3b3b3b;;
+}
+
+/*responsivo*/
+@media (min-width:600px) and (max-width:1200px){
+    /*imagens*/
+    .albumCasa{
         display: flex;
-        width: auto;
-        height: 7rem;
+        width: 17rem;
+        height: 15rem;
         padding: 1rem;
-       
-        background-color: snow;
+        margin-left: 15rem;
+
         justify-content: center;
     }
-    img{
-        width: 50%;
+    .imgdesc{
+        width: 15rem;
+        transition: transform .2s;
     }
-    .info{
+    .imgdesc:hover {
+        transform: scale(1.2);
+    }
+
+    /*descrição*/
+    .infoCasa{
+        justify-content: left;
+        margin: 1%;
+        font-size: smaller;
+    }
+}
+
+@media(max-width:600px){
+
+    /*imagens*/
+    .albumCasa{
+        display: inline-block;
+        width: 10rem;
+        height: 10rem;
+        padding: 1rem;
+        margin-left: 12rem;
+
+        justify-content: center;
+    }
+    .imgdesc{
+        width: 10rem;
+        transition: transform .2s;
+    }
+    .imgdesc:hover {
+        transform: scale(1.3);
+    }
+
+    /*descrição*/
+    .infoCasa{
         justify-content: left;
         margin: 1%;
         font-size: smaller;

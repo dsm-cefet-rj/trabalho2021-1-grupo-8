@@ -1,4 +1,4 @@
-img{
+.imgComp{
     width: 50%;
     margin: 1rem;
 }
@@ -8,12 +8,12 @@ img{
 }
 .container .fp{
     display: flex;
-    width: auto;
-    height: 10rem;
+    width: 13rem;
+    height: 11rem;
 }
+
 @media(max-width:600px){
-    img{
-        
+    .imgComp{
         width: 50%;
     }
     .container{
@@ -23,7 +23,7 @@ img{
     }
     .container .fp{
         display: flex;
-        width: auto;
-        height: 6rem;
+        width: 12rem;
+        height: 10rem;
     }
 }

@@ -8,10 +8,10 @@ export class Compativel extends Component {
             <h3>Pessoas compatíveis:</h3>
 
             <div class="fp">
-                <img src="fp.jpg" alt="Foto de perfil"/>
-                <img src="fp.jpg" alt="Foto de perfil"/>
-                <img src="fp.jpg" alt="Foto de perfil"/>
-                <img src="fp.jpg" alt="Foto de perfil"/>
+                <img className='imgComp' src="fp.jpg" alt="Foto de perfil"/>
+                <img className='imgComp' src="fp.jpg" alt="Foto de perfil"/>
+                <img className='imgComp' src="fp.jpg" alt="Foto de perfil"/>
+                <img className='imgComp' src="fp.jpg" alt="Foto de perfil"/>
             </div>
 
         </div>
