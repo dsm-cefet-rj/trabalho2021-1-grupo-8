@@ -22,7 +22,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <a href="/">
+              <a href="/imoveis">
                 <p>Imóveis</p>
               </a>
             </li>
