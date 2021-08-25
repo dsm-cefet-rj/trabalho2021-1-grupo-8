@@ -3,7 +3,7 @@ import styles from "./styles/perfil.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
+
 const profiles = [
   {
     id: 1,
@@ -51,7 +51,7 @@ const profiles = [
   },
 ];
 
-export default function Perfil() {
+export default function Perfil(filteredStore) {
   const settings = {
     dots: true,
     infinite: false,
@@ -60,31 +60,29 @@ export default function Perfil() {
     slidesToScroll: 1,
   };
   const [isClicked, setIsClicked] = useState(false);
+  
+
   return (
     <div className={styles.all}>
       <div className={styles.slider}>
         <Slider {...settings}>
-          {profiles.map((profiles) => (
+          {filteredStore.filteredStore[0].map((profiles) => (
             <div key={profiles.id} className={styles.card}>
               {isClicked ? (
                 <div className={styles.moreInfo}>
                   <p>{profiles.email}</p>
-                  <p>Aceita pet: {profiles.pet}</p>
-                  <p>{profiles.stay}</p>
-                  <p>Tempo que pretende ficar: {profiles.time}</p>
                 </div>
               ) : (
                 <div className={styles.images}>
-                  <img src={profiles.img} alt="foto" />
-                  <img src={profiles.img} className={styles.none} alt="foto" />
+                  {/*<img src={profiles.img} alt="foto" />
+                  <img src={profiles.img} className={styles.none} alt="foto" />*/}
                 </div>
               )}
 
               <div className={styles.basicInfo}>
-                <p>
-                  {profiles.name}, {profiles.age}
-                </p>
-                <p>R$ {profiles.money}</p>
+              <p>{profiles.email}</p>
+                <p>{profiles.senha}</p>
+                
               </div>
               <div className={styles.buttons}>
                 <button onClick={() => setIsClicked(!isClicked)}>
@@ -97,7 +95,6 @@ export default function Perfil() {
             </div>
           ))}
         </Slider>
-        
       </div>
     </div>
   );
