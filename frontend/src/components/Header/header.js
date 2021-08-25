@@ -1,10 +1,11 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import Chat from "../Chat/chat";
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
   const [isClicked, setIsClicked] = useState(false);
+  
   return (
     <div className={styles.all}>
       <button
