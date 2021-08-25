@@ -2,15 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "./styles/global.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header/header";
+import { Provider } from "react-redux";
+
 
 
 ReactDOM.render(
+  
   <React.StrictMode>
     <BrowserRouter>
       <Header />
-      <App/>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
