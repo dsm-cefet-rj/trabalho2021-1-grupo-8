@@ -97,6 +97,10 @@
     
     width: 85%;
   }
+  
+  .chat .msg span{
+   display: flex;
+  }
   .chat p {
     font-size: 36px;
     margin-top: 0.5rem;
