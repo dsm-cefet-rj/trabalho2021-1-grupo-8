@@ -4,6 +4,7 @@ import Perfil from "./perfil";
 import ListaDeImoveis from "./components/Imoveis/ListaDeImoveis";
 import Chat from "./components/Chat/chat";
 import descImovel from "./descImovel";
+import cadastro from "./cadastro";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path="/perfil" component={Perfil}/>
       <Route path="/imoveis" component={ListaDeImoveis}/>
       <Route path="/descImovel" component={descImovel}/>
+      <Route path="/cadastro" component={cadastro}/>
     </div>
   );
 }
