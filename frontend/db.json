@@ -1,4 +1,30 @@
 {
+  "chat": [
+    {
+      "chat": "oi",
+      "id": 1
+    },
+    {
+      "chat": "oi",
+      "id": 2
+    },
+    {
+      "chat": "oi",
+      "id": 3
+    },
+    {
+      "chat": "lk",
+      "id": 4
+    },
+    {
+      "chat": "oi",
+      "id": 5
+    },
+    {
+      "chat": "eae",
+      "id": 6
+    }
+  ],
   "login": [
     {
       "id": 1,
@@ -9,6 +35,31 @@
       "email": "ppedrolangelo@gmail.com",
       "senha": "senhaaaaa",
       "id": 2
+    },
+    {
+      "email": "oi@gmail.com",
+      "senha": "eae",
+      "id": 3
+    },
+    {
+      "email": "alo@gmail.com",
+      "senha": "12345",
+      "id": 4
+    },
+    {
+      "email": "eaeihu@hotmail.com",
+      "senha": "132547",
+      "id": 5
+    },
+    {
+      "email": "eaeihu@hotmail.com",
+      "senha": "oiugreu",
+      "id": 6
+    },
+    {
+      "email": "eaeihu@hotmail.com",
+      "senha": "dvwuydwd",
+      "id": 7
     }
   ]
 }
