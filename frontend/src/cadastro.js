@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import store from "./store";
+import "./components/Cadastro/cadastro.css"
 
 import { useEffect } from "react";
 
@@ -55,13 +56,21 @@ export default function Cadastro(filteredStore) {
         <a>{m.id}</a>
       ))}
       {console.log(filteredStore.filteredStore[1])}
-      <form onSubmit={onSubmit}>
-        <label>Email</label>
-        <input name="email" onChange={onChange} />
-        <label>Senha</label>
-        <input name="senha" onChange={onChange} />
-        <button type="submit">Cadastrar</button>
-      </form>
+      <div className= "cad">
+        <form onSubmit={onSubmit}>
+          <div className="email">
+            <label>Email</label>
+            <input name="email" onChange={onChange}/>
+          </div>
+          <div className="senha">
+            <label>Senha</label>
+            <input name="senha" onChange={onChange}/>
+          </div>
+          <div className="botaoCad">
+            <button type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

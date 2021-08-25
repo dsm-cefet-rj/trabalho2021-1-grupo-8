@@ -1,0 +1,26 @@
+.cad{
+    background-color: rgb(255, 255, 255);
+    width: 15rem;
+    height: 20rem;
+    border: 2px solid black;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    margin-left: 40%;
+}
+.email{
+    margin-top: 6rem;
+    padding: 1rem;
+}
+.senha{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.botaoCad{
+    margin-top: 1rem;
+    transition: transform .2s;
+}
+.botaoCad:hover {
+    transform: scale(1.05);
+}
