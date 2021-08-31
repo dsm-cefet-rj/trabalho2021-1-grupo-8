@@ -2,7 +2,6 @@
 import { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import store from "./store";
 import "./components/Cadastro/cadastro.css"
 
 import { useEffect } from "react";
@@ -52,7 +51,7 @@ export default function Cadastro(filteredStore) {
 
   return (
     <div>
-      {filteredStore.filteredStore[0].map((m) => (
+      {filteredStore.filteredStore.map((m) => (
         <a>{m.id}</a>
       ))}
       {console.log(filteredStore.filteredStore[1])}
