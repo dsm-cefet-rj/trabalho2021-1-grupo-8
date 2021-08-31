@@ -60,6 +60,33 @@
       "email": "eaeihu@hotmail.com",
       "senha": "dvwuydwd",
       "id": 7
+    },
+    {
+      "email": "teste novo",
+      "senha": "senha nova",
+      "local": "Rio de Janeiro",
+      "id": 8
+    },
+    {
+      "email": "teste2",
+      "senha": "sdasd",
+      "local": "SP",
+      "": "Casa",
+      "id": 9
+    },
+    {
+      "email": "ppedrolangelo@gmail.com",
+      "senha": "senha123",
+      "local": "Rio de Janeiro",
+      "": "Casa",
+      "id": 10
+    },
+    {
+      "email": "asdsadas",
+      "senha": "senha123",
+      "local": "Rio de Janeiro",
+      "residensia": "Casa",
+      "id": 11
     }
   ]
 }

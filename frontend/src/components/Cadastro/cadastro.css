@@ -1,21 +1,58 @@
 .cad{
-    background-color: rgb(255, 255, 255);
-    width: 15rem;
-    height: 20rem;
-    border: 2px solid black;
-    text-align: center;
-    margin: 1rem;
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-left: 40%;
+    text-align: center;
+    width: auto;
+    
 }
 .email{
     margin-top: 6rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .senha{
     margin-top: 1rem;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.local{
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.residencia{
+    margin-top: 1rem;
+    
+}
+
+.preco {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.meio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formField_error{
+    font-family: 'Times New Roman';
+    color:brown;
 }
 .botaoCad{
     margin-top: 1rem;
@@ -24,3 +61,4 @@
 .botaoCad:hover {
     transform: scale(1.05);
 }
+
