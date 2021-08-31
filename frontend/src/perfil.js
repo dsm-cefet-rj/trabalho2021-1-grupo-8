@@ -66,7 +66,7 @@ export default function Perfil(filteredStore) {
     <div className={styles.all}>
       <div className={styles.slider}>
         <Slider {...settings}>
-          {filteredStore.filteredStore[0].map((profiles) => (
+          {filteredStore.filteredStore.map((profiles) => (
             <div key={profiles.id} className={styles.card}>
               {isClicked ? (
                 <div className={styles.moreInfo}>
