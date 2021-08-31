@@ -3,12 +3,18 @@ import { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import "./components/Cadastro/cadastro.css"
-
 import { useEffect } from "react";
+import { projetoSchema  } from "./ProjetoSchema";
+import { yupResolver }  from "@hookform/resolvers/yup"
+import { useForm } from "react-hook-form";
 
 export default function Cadastro(filteredStore) {
   const [values, setValues] = useState({});
   const history = useHistory();
+
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(projetoSchema)
+  });
 
   function onChange(event) {
     const { name, value } = event.target;
@@ -19,7 +25,6 @@ export default function Cadastro(filteredStore) {
     window.location.reload();
   }
   function onSubmit(event) {
-    event.preventDefault();
 
     axios.post("http://localhost:5000/login", values).then((response) => {
       
@@ -56,14 +61,16 @@ export default function Cadastro(filteredStore) {
       ))}
       {console.log(filteredStore.filteredStore[1])}
       <div className= "cad">
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="email">
             <label>Email</label>
-            <input name="email" onChange={onChange}/>
+            <input name="email" onChange={onChange} {...register('email')}/>
+            <span className="error-messaage">{errors.email?.message}</span>
           </div>
           <div className="senha">
             <label>Senha</label>
-            <input name="senha" onChange={onChange}/>
+            <input name="senha" onChange={onChange} {...register('senha')}/>
+            <span className="error-messaage">{errors.senha?.message}</span>
           </div>
           <div className="botaoCad">
             <button type="submit">Cadastrar</button>

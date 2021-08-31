@@ -15,9 +15,9 @@ export let projetoSchema = object().shape(
 
         senha: string().required().min(5),
 
-        local: number().required,
+        //local: number().required,
 
-        preco: number().required,
+        //preco: number().required,
 
     }
 
