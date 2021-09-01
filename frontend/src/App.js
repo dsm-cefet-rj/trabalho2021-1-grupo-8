@@ -8,7 +8,8 @@ import Cadastro from "./cadastro";
 import axios from "axios";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { createSlice, PayloadAction, configureStore } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, configureStore, createEntityAdapter } from "@reduxjs/toolkit";
+
 
 function App() {
   const [login, setLogin] = useState([]);
@@ -19,10 +20,17 @@ function App() {
   }, []);
 
   let lastId = 1;
-  const initialState = login;
+
+  const projetosAdapter = createEntityAdapter();
+  const initialState = projetosAdapter.getInitialState({
+    status: 'not_loaded',
+    error: null
+  });
+
+  /*const initialState = login;
 
   {
-    /*function Reducer(state = [initialState], action) {
+    function Reducer(state = [initialState], action) {
     switch (action.type) {
       case "perfilAdd":
         return [
@@ -39,7 +47,7 @@ function App() {
         return state;
     }
   }*/
-  }
+
   function addLoginReducer(state, action) {
     return [
       ...state,
@@ -50,9 +58,11 @@ function App() {
       },
     ];
   }
+
   function removeLoginReducer(state, action) {
     return state.filter((perfil) => perfil.id !== action.payload.id);
   }
+
   const loginSlice = createSlice({
     name: "login",
     initialState,
@@ -60,6 +70,13 @@ function App() {
       addLogin: (state, action) => addLoginReducer(state, action),
       removeLogin: (state, action) => removeLoginReducer(state, action),
     },
+    extraReducers: {
+
+      [removeLoginReducer.fulfilled]:(state, action) => {state.status = 'deleted'; projetosAdapter.removeOne(state, action.payload);},
+
+      [addLoginReducer.fulfilled]:(state, action) => {state.status = 'saved'; projetosAdapter.addOne(state, action.payload);},
+
+  }
   });
 
   const store = configureStore({

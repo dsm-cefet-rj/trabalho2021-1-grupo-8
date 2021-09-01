@@ -56,10 +56,7 @@ export default function Cadastro(filteredStore) {
 
   return (
     <div>
-      {filteredStore.filteredStore.map((m) => (
-        <a>{m.id}</a>
-      ))}
-      {console.log(filteredStore.filteredStore[1])}
+      
       <div className= "cad">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="email">
