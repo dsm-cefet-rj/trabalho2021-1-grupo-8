@@ -21,33 +21,13 @@ function App() {
 
   let lastId = 1;
 
-  const projetosAdapter = createEntityAdapter();
-  const initialState = projetosAdapter.getInitialState({
+  const loginAdapter = createEntityAdapter();
+  const initialLoginState = loginAdapter.getInitialState({
     status: 'not_loaded',
     error: null
   });
 
-  /*const initialState = login;
-
-  {
-    function Reducer(state = [initialState], action) {
-    switch (action.type) {
-      case "perfilAdd":
-        return [
-          ...state,
-          {
-            id: ++lastId,
-            email: action.payload.email,
-            senha: action.payload.senha,
-          },
-        ];
-      case "perfilRemovido":
-        
-      default:
-        return state;
-    }
-  }*/
-
+  
   function addLoginReducer(state, action) {
     return [
       ...state,
@@ -65,16 +45,16 @@ function App() {
 
   const loginSlice = createSlice({
     name: "login",
-    initialState,
+    initialLoginState,
     reducers: {
       addLogin: (state, action) => addLoginReducer(state, action),
       removeLogin: (state, action) => removeLoginReducer(state, action),
     },
     extraReducers: {
 
-      [removeLoginReducer.fulfilled]:(state, action) => {state.status = 'deleted'; projetosAdapter.removeOne(state, action.payload);},
+      [removeLoginReducer.fulfilled]:(state, action) => {state.status = 'deleted'; loginAdapter.removeOne(state, action.payload);},
 
-      [addLoginReducer.fulfilled]:(state, action) => {state.status = 'saved'; projetosAdapter.addOne(state, action.payload);},
+      [addLoginReducer.fulfilled]:(state, action) => {state.status = 'saved'; loginAdapter.addOne(state, action.payload);},
 
   }
   });
