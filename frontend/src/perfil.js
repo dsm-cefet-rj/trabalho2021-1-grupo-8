@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./styles/perfil.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import axios from "axios";
 const profiles = [
   {
     id: 1,
@@ -61,12 +61,17 @@ export default function Perfil(filteredStore) {
   };
   const [isClicked, setIsClicked] = useState(false);
   
-
+  const [login, setLogin] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:5000/login").then((response) => {
+      setLogin(response.data);
+    });
+  }, []);
   return (
     <div className={styles.all}>
       <div className={styles.slider}>
         <Slider {...settings}>
-          {filteredStore.filteredStore.map((profiles) => (
+          {login.map((profiles) => (
             <div key={profiles.id} className={styles.card}>
               {isClicked ? (
                 <div className={styles.moreInfo}>
