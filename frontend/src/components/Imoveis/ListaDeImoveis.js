@@ -1,36 +1,28 @@
 import "./imoveis.css";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function ListaDeImoveis() {
+
+  const [imovel, setImovel] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:5000/imoveis").then((response) => {
+      setImovel(response.data);
+    });
+  }, []);
   return (
     <div>
-      <ul>
-        <a href="/descImovel">
+      {imovel.map((imovel)=>(
+        <ul>
+          <a href="/descImovel">
           <li className="lista">
             <img className="img" src="Apartamento1.jpg" />
-            <h2>R$ 1000/mês</h2>
-            <p>Descrição da casa</p>
+            <h2>{imovel.preço}</h2>
+            <p>{imovel.desc}</p>
           </li>
         </a>
-        <br />
-
-        <a href="">
-          <li className="lista">
-            <img className="img" src="apartamento2.jpg" />
-            <h2>R$ 900/mês</h2>
-            <p>Descrição da casa</p>
-          </li>
-        </a>
-        <br />
-
-        <a href="">
-          <li className="lista">
-            <img className="img" src="apartamento3.jpg" />
-            <h2>R$ 2000/mês</h2>
-            <p>Descrição da casa</p>
-          </li>
-        </a>
-      </ul>
+        </ul>
+      ))}
     </div>
   );
 }
