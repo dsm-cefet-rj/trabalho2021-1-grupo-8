@@ -59,24 +59,63 @@ function App() {
   }
   });
 
-  const store = configureStore({
+  const loginstore = configureStore({
     reducer: loginSlice.reducer,
   });
 
-  //const store = createStore(Reducer)
-  console.log(store.getState());
-  const filteredStore = store.getState();
-  console.log(filteredStore);
+  const imoveisAdapter = createEntityAdapter();
+  const initialImoveisState = imoveisAdapter.getInitialState({
+    status: 'not_loaded',
+    error: null
+  });
+
+  
+  function addImoveisReducer(state, action) {
+    return [
+      ...state,
+      {
+        id: ++lastId,
+        image: action.payload.image,
+        desc: action.payload.desc,
+        preco: action.payload.preco,
+      },
+    ];
+  }
+
+  function removeImoveisReducer(state, action) {
+    return state.filter((perfil) => perfil.id !== action.payload.id);
+  }
+
+  const imoveisSlice = createSlice({
+    name: "imovel",
+    initialLoginState,
+    reducers: {
+      addImoveis: (state, action) => addImoveisReducer(state, action),
+      removeImoveis: (state, action) => removeImoveisReducer(state, action),
+    },
+    extraReducers: {
+
+      [removeImoveisReducer.fulfilled]:(state, action) => {state.status = 'deleted'; imoveisAdapter.removeOne(state, action.payload);},
+
+      [addImoveisReducer.fulfilled]:(state, action) => {state.status = 'saved'; imoveisAdapter.addOne(state, action.payload);},
+
+  }
+  });
+
+  const imoveisstore = configureStore({
+    reducer: imoveisSlice.reducer,
+  });
+
   return (
     <div className="App">
       <Route path="/chat" component={Chat} />
       <Route path="/perfil">
-        <Perfil filteredStore={filteredStore} />
+        <Perfil filteredStore={loginstore} />
       </Route>
       <Route path="/imoveis" component={ListaDeImoveis} />
       <Route path="/descImovel" component={descImovel} />
       <Route path="/cadastro">
-        <Cadastro filteredStore={filteredStore} />
+        <Cadastro />
       </Route>
     </div>
   );

@@ -1,5 +1,6 @@
 import "./imoveis.css";
 
+
 export default function ListaDeImoveis() {
   return (
     <div>
