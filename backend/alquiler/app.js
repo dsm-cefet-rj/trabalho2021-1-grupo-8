@@ -7,7 +7,8 @@ var logger = require('morgan');
 // cadastra rotas
 var indexRouter = require('./routes/index');
 var imoveisRouter = require('./routes/imoveis');
-
+var cadastroRouter = require('./routes/cadastro');
+var chatRouter = require('./routes/chat');
 
 var app = express();
 
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //usa rotas
 app.use('/', indexRouter);
 app.use('/imoveis', imoveisRouter);
-
+app.use('/cadastro', cadastroRouter);
+app.use('/chat', chatRouter);
 
 module.exports = app;
