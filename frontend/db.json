@@ -23,6 +23,10 @@
     {
       "chat": "eae",
       "id": 6
+    },
+    {
+      "chat": "Olá Mundo!!!",
+      "id": 7
     }
   ],
   "login": [
@@ -100,22 +104,22 @@
       "id": 14
     }
   ],
-  "imoveis" : [
+  "imoveis": [
     {
-   "desc": "casa de 80m² com 3 quartos",
-   "preço": "R$2000/mes"
-   },
+      "desc": "casa de 80m² com 3 quartos",
+      "preço": "R$2000/mes"
+    },
     {
-   "desc": "apartamento de 50m² com 1 quarto",
-   "preço": "R$1500/mes"
-   },
+      "desc": "apartamento de 50m² com 1 quarto",
+      "preço": "R$1500/mes"
+    },
     {
-   "desc": "Loft de 40m²",
-   "preço": "R$800/mes"
-   },
-   {
-    "desc": "Kitnet de 35m²",
-    "preço": "R$700/mes"
+      "desc": "Loft de 40m²",
+      "preço": "R$800/mes"
+    },
+    {
+      "desc": "Kitnet de 35m²",
+      "preço": "R$700/mes"
     }
-   ]
+  ]
 }
