@@ -8,6 +8,23 @@ var imoveisRouter = require('./routes/imoveis');
 var loginRouter = require('./routes/login');
 var chatRouter = require('./routes/chat');
 
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+
+const imoveisSchema = new Schema ({
+    desc: {
+        type: String,
+        require: true,
+    },
+    preco: {
+        type: String,
+        require: true,
+    }
+})
+
+module.exports = imoveisSchema;
+
 var app = express();
 
 app.use(logger('dev'));
