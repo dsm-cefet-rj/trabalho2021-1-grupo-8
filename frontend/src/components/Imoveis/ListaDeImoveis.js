@@ -6,7 +6,7 @@ export default function ListaDeImoveis() {
 
   const [imovel, setImovel] = useState([]);
   useEffect(() => {
-    axios.get("http://192.168.1.74:5000/imoveis").then((response) => {
+    axios.get("http://localhost:5000/imoveis").then((response) => {
       setImovel(response.data);
     });
   }, []);
