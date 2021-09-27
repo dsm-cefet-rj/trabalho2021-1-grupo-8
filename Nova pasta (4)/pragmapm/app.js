@@ -9,21 +9,13 @@ var loginRouter = require('./routes/login');
 var chatRouter = require('./routes/chat');
 
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
+const url = 'mongodb://localhost:27017/pragmapm';
+const connect = mongoose.connect(url);
 
-const imoveisSchema = new Schema ({
-    desc: {
-        type: String,
-        require: true,
-    },
-    preco: {
-        type: String,
-        require: true,
-    }
-})
-
-module.exports = imoveisSchema;
+connect.then((db) => {
+    console.log("conectado");
+}, (err) => { console.log(err); });
 
 var app = express();
 

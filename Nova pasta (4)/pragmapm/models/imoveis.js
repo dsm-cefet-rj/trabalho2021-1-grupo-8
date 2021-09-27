@@ -13,4 +13,6 @@ const imoveisSchema = new Schema ({
     }
 })
 
-module.exports = imoveisSchema;
+var Imoveis = mongoose.model('imoveis', imoveisSchema); //nome da collection do do mongodb
+
+module.exports = Imoveis;
