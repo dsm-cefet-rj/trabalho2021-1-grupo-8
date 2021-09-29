@@ -14,6 +14,20 @@ router.route('/')
     res.setHeader('Content-type', 'application/json');
     res.json(imoveis);
   }, (err) => { console.log(err); });
-});
+})
+.post((req, res, next) => {
+  Imoveis.create(req.body)
+  .then((imoveis) => {
+      console.log('imoveis criado: ', imoveis);
+      res.statusCode = 200;
+      res.setHeader('Content-type', 'application/json');
+      res.json(imoveis);
+  }, (err) => console.log(err))
+
+      res.statusCode = 200;
+      res.setHeader('Content-type', 'application/json');
+      res.json(imoveis);
+})
+
 
 module.exports = router;
