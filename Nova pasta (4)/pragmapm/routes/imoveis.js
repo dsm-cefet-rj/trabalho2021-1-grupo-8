@@ -23,10 +23,6 @@ router.route('/')
       res.setHeader('Content-type', 'application/json');
       res.json(imoveis);
   }, (err) => console.log(err))
-
-      res.statusCode = 200;
-      res.setHeader('Content-type', 'application/json');
-      res.json(imoveis);
 })
 
 

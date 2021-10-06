@@ -24,10 +24,6 @@ router.route('/')
         res.setHeader('Content-type', 'application/json');
         res.json(login);
     }, (err) => console.log(err))
-
-        res.statusCode = 200;
-        res.setHeader('Content-type', 'application/json');
-        res.json(login);
 })
 
 module.exports = router;
