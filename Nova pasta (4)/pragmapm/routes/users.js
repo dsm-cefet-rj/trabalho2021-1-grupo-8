@@ -28,25 +28,25 @@ router.post('/signup', cors.corsWithOptions, (req, res, next) => {
 });
 
 router.route('/login').options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
-  router.post('/login', cors.corsWithOptions, passport.authenticate('local'), (req, res) => {
-    
-    var token = authenticate.getToken({_id: req.user._id});
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.json({id: req.user._id, token: token});
-  });
+router.post('/login', cors.corsWithOptions, passport.authenticate('local'), (req, res) => {
   
-  router.get('/logout', cors.corsWithOptions, (req, res) => {
-    if (req.session) {
-      req.session.destroy();
-      res.clearCookie('session-id');
-      res.redirect('/');
-    }
-    else {
-      var err = new Error('You are not logged in!');
-      err.status = 403;
-      next(err);
-    }
-  });
+  var token = authenticate.getToken({_id: req.user._id});
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'application/json');
+  res.json({id: req.user._id, token: token});
+});
+  
+router.get('/logout', cors.corsWithOptions, (req, res) => {
+  if (req.session) {
+    req.session.destroy();
+    res.clearCookie('session-id');
+    res.redirect('/');
+  } 
+  else {
+    var err = new Error('You are not logged in!');
+    err.status = 403;
+    next(err);
+  }
+});
 
 module.exports = router;
