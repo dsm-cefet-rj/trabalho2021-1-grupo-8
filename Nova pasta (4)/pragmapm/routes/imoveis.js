@@ -16,7 +16,7 @@ router.route('/')
     res.json(imoveis);
   }, (err) => { console.log(err); });
 })
-.post((req, res, next) => {
+.post(authenticate.verifyUser, (req, res, next) => {
   Imoveis.create(req.body)
   .then((imoveis) => {
       console.log('imoveis criado: ', imoveis);

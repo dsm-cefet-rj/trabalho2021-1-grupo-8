@@ -9,11 +9,8 @@ export let projetoSchema = object().shape(
 
     {
 
-        id: number(),
-
-        email: string().email().required().max(30),
-
-        senha: string().required().min(5),
+        username: string().email().required(),
+        password: string().min(6).max(9).required(),
 
         //local: number().required,
 

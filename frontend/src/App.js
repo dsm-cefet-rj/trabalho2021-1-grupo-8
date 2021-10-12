@@ -33,8 +33,8 @@ function App() {
       ...state,
       {
         id: ++lastId,
-        email: action.payload.email,
-        senha: action.payload.senha,
+        username: action.payload.username,
+        password: action.payload.password,
       },
     ];
   }

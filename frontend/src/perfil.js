@@ -11,7 +11,7 @@ const profiles = [
     name: "Name",
     age: "Idade",
     money: "XXX,XX",
-    email: "email@email.com",
+    username: "username@username.com",
     pet: "Sim ou Não",
     stay: "Moradia ou Estadia",
     time: "X meses X dias",
@@ -22,7 +22,7 @@ const profiles = [
     name: "Name",
     age: "Idade",
     money: "XXX,XX",
-    email: "email@email.com",
+    username: "username@username.com",
     pet: "Sim ou Não",
     stay: "Moradia ou Estadia",
     time: "X meses X dias",
@@ -33,7 +33,7 @@ const profiles = [
     name: "Name",
     age: "Idade",
     money: "XXX,XX",
-    email: "email@email.com",
+    username: "username@username.com",
     pet: "Sim ou Não",
     stay: "Moradia ou Estadia",
     time: "X meses X dias",
@@ -44,7 +44,7 @@ const profiles = [
     name: "Name",
     age: "Idade",
     money: "XXX,XX",
-    email: "email@email.com",
+    username: "username@username.com",
     pet: "Sim ou Não",
     stay: "Moradia ou Estadia",
     time: "X meses X dias",
@@ -75,7 +75,7 @@ export default function Perfil(filteredStore) {
             <div key={profiles.id} className={styles.card}>
               {isClicked ? (
                 <div className={styles.moreInfo}>
-                  <p>{profiles.email}</p>
+                  <p>{profiles.username}</p>
                 </div>
               ) : (
                 <div className={styles.images}>
@@ -85,8 +85,8 @@ export default function Perfil(filteredStore) {
               )}
 
               <div className={styles.basicInfo}>
-              <p>{profiles.email}</p>
-                <p>{profiles.senha}</p>
+              <p>{profiles.username}</p>
+                <p>{profiles.password}</p>
                 
               </div>
               <div className={styles.buttons}>

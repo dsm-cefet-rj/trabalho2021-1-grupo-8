@@ -33,11 +33,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(passport.initialize());
 
 app.use('/users', usersRouter);
+app.use('/login', loginRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/imoveis', imoveisRouter);
-app.use('/login', loginRouter);
 app.use('/chat', chatRouter);
 
 module.exports = app;
