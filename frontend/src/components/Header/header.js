@@ -28,8 +28,8 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="/">
-                <p>Configurações</p>
+              <a href="/cadastro">
+                <p>Cadastro</p>
               </a>
             </li>
           </ul>
